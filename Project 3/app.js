@@ -1,5 +1,5 @@
 var main = function() {
-    var state;
+    var audio = document.getElementById("player");
   $('#play').click(function(){
     $('#message').text("Playing track");
     $('#player').trigger("play");
