@@ -2,30 +2,30 @@ $(document).ready(function () {
 
   var audio = document.getElementById("player");
 
-  $('#play').click(function () {
-    $('#message').text("Playing track");
+  $("#play").click(function () {
+    $("#message").text("Playing track");
     audio.play();
   });
 
   $("#pause").click(function () {
     audio.pause();
-    $("#message").text("Track paused");
-  });
-
-  $("#mute").click(function () {
-    audio.muted = true;
-    $("#message").text("Track muted");
-  });
-
-  $("#unmute").click(function () {
-    audio.muted = false;
-    $("#message").text("Track unmuted");
+    $("#message").text("Paused");
   });
 
   $("#stop").click(function () {
     audio.pause();
     audio.currentTime = 0;
-    $("#message").text("Track stopped");
+    $("#message").text("Stopped");
+  });
+
+  $("#mute").click(function () {
+    audio.muted = true;
+    $("#message").text("Muted");
+  });
+
+  $("#unmute").click(function () {
+    audio.muted = false;
+    $("#message").text("Unmuted");
   });
 
   $("#volUp").click(function () {
